@@ -34,8 +34,8 @@ def get_credential_from(file_path):
         print(f"오류가 발생했습니다: {e}")
         return None
 
-TWILIO_ACCOUNT_SID = get_credential_from('/Users/doungukkim/Desktop/workspace/object-detecting-v2/credentials/account_sid.txt')
-TWILIO_AUTH_TOKEN = get_credential_from('/Users/doungukkim/Desktop/workspace/object-detecting-v2/credentials/auth_token.txt')
+TWILIO_ACCOUNT_SID = get_credential_from('/credentials/account_sid.txt')
+TWILIO_AUTH_TOKEN = get_credential_from('/credentials/auth_token.txt')
 
 TWILIO_FROM_NUMBER = '+'  # Twilio phone number
 TWILIO_TO_NUMBER = '+'    # Destination phone number
@@ -45,10 +45,10 @@ client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
 # 모델 로드
 # 안전 가구 탐지를 위한 감지 or 세그멘테이션 모델
-model_segmentation = YOLO('/Users/doungukkim/Desktop/workspace/object-detecting-v2/trained-models/segment/yolov8x-seg.pt')  # segmentation 모델
-model_detection = YOLO('/Users/doungukkim/Desktop/workspace/object-detecting-v2/trained-models/original/yolov8m.pt') # 중간 모델
-# model_detection = YOLO('/Users/doungukkim/Desktop/workspace/object-detecting-v2/trained-models/original/yolo11m.pt') # v11 모델
-# model_detection= YOLO('/Users/doungukkim/Desktop/workspace/object-detecting-v2/trained-models/4-1/best.pt') # trained model
+model_segmentation = YOLO('/models/yolov8x-seg.pt')  # segmentation 모델
+model_detection = YOLO('/models/yolov8m.pt') # 중간 모델
+# model_detection = YOLO('/models/yolo11m.pt') # v11 모델
+# model_detection= YOLO('/models/trained-models/4-1/best.pt') # trained model
 
 safe_furniture_classes = [56, 57, 59]  # 56: chair, 57: couch, 59: bed
 
@@ -259,8 +259,8 @@ def main():
     global STATIONARY_THRESHOLD
 
     # 입력 및 출력 비디오 경로를 실제 파일 위치로 수정하세요
-    input_video_path = '/Users/doungukkim/Desktop/workspace/object-detecting-v2/tennis/original/cafe.mp4'
-    output_video_path = '/Users/doungukkim/Desktop/workspace/object-detecting-v2/tennis/output/cafe-output-v7-11n.mp4'
+    input_video_path = '/test-video/input/cafe.mp4'
+    output_video_path = '/test-video/output/cafe-output.mp4'
 
     cap = cv2.VideoCapture(input_video_path)
     fps = int(cap.get(cv2.CAP_PROP_FPS))
