@@ -21,7 +21,7 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f"Using device: {device}")
 
 # Twilio API 설정
-# Twilio 계정 정보와 전화번호를 자신의 것으로 변경하세요
+# Twilio 계정 정보와 전화번호를 자신의 것으로 변경
 def get_credential_from(file_path):
     try:
         with open(file_path, 'r') as file:
