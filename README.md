@@ -31,18 +31,7 @@
 - [numpy](https://pypi.org/project/numpy/)
 - [Twilio](https://pypi.org/project/twilio/) (SMS 전송 기능; 유료 서비스)
 
-### 설치 방법
-
-1. **필수 라이브러리 설치:**
-    ```bash
-    pip install opencv-python torch ultralytics numpy twilio
-    ```
-
-2. **프로젝트 클론:**
-    ```bash
-    git clone https://github.com/yourusername/your-repository-name.git
-    cd your-repository-name
-    ```
+[//]: # (### )
 
 ### 실행 예제 및 테스트 방법
 
