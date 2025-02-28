@@ -36,8 +36,8 @@
 ### 실행 예제 및 테스트 방법
 
 1. **모델 파일 준비:**
-   - [yolov8x-seg.pt](https://docs.ultralytics.com/ko/models/yolov8/#supported-tasks-and-modes): 안전가구 세그멘테이션 모델
-   - [yolov8m.pt](https://docs.ultralytics.com/ko/tasks/segment/#models): 사람 감지 모델
+   - [yolov8x-seg.pt](https://docs.ultralytics.com/ko/tasks/segment/#models): 안전가구 세그멘테이션 모델
+   - [yolov8m.pt](https://docs.ultralytics.com/ko/tasks/detect/#models): 사람 감지 모델
 
 
 
