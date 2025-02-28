@@ -36,8 +36,8 @@
 ### 실행 예제 및 테스트 방법
 
 1. **모델 파일 준비:**
-   - `yolov8x-seg.pt`: 안전가구 세그멘테이션 모델 [다운로드](https://docs.ultralytics.com/ko/models/yolov8/#supported-tasks-and-modes)
-   - `yolov8m.pt`: 사람 감지 모델 [다운로드](https://docs.ultralytics.com/ko/tasks/segment/#models)
+   - [yolov8x-seg.pt](https://docs.ultralytics.com/ko/models/yolov8/#supported-tasks-and-modes): 안전가구 세그멘테이션 모델
+   - [yolov8m.pt](https://docs.ultralytics.com/ko/tasks/segment/#models): 사람 감지 모델
 
 
 
@@ -48,20 +48,20 @@
 
 
 
-2. **SMS 알림 기능 설정 (선택 사항):**  
+3. **SMS 알림 기능 설정 (선택 사항):**  
    - `/credentials/account_sid.txt`와 `/credentials/auth_token.txt` 파일에 Twilio 계정 SID와 인증 토큰을 입력합니다.  
    - **주의:** SMS 전송 기능은 유료 서비스인 Twilio를 기반으로 하므로, 무료 환경에서는 해당 기능을 비활성화하거나 대체할 필요가 있습니다.
 
-1. **입력 비디오 파일 준비:**
-   - `시나리오 동영상 파일`: 3개의 시나리오 테스트 영상[다운로드](https://drive.google.com/file/d/14d90cJdAhtVTQs-mNNIeRZCxFy63y1u6/view?usp=drive_link)
+4. **입력 비디오 파일 준비:**
+   - [시나리오 동영상 파일](https://drive.google.com/file/d/14d90cJdAhtVTQs-mNNIeRZCxFy63y1u6/view?usp=drive_link): 3개의 시나리오 테스트 영상
    
 
-3. **입력 및 출력 비디오 경로 설정:**  
+5. **입력 및 출력 비디오 경로 설정:**  
    - 입력 비디오 경로: `/test-video/input/`  
    - 출력 비디오 경로: `/test-video/output/`  
    경로는 사용 환경에 맞게 수정하세요.
 
-4. **프로그램 실행:**
+6. **프로그램 실행:**
    실행 후, 지정한 출력 경로에 처리된 비디오가 저장됩니다.
 
 ## 논문 및 참고 자료
