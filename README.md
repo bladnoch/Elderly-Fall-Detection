@@ -1,6 +1,6 @@
 # ElderSafe
 
-# 노인 낙상 감지 및 안전가구 인직 Segmentation 모델
+# 노인 낙상 감지 모니터링 시스템
 
 본 프로젝트는 영상 내에서 노인의 이동 상태를 모니터링하고, 안전가구(의자, 소파, 침대, 테이블 등)를 세그멘테이션 모델을 통해 인식하여 위험 상황(예: 낙상 등)을 감지하는 시스템입니다. 위험 상황이 감지되면 SMS 알림을 전송하도록 설계되었으며, 단 한 번만 알림이 전송되도록 구현되어 있습니다. 단, SMS 전송 기능은 Twilio 기반으로 구현되어 있으나, Twilio는 유료 서비스이므로 실제 사용 환경에 따라 비활성화하거나 대체 기능을 고려해야 합니다.
 
@@ -35,14 +35,26 @@
 
 ### 실행 예제 및 테스트 방법
 
-1. **모델 파일 준비:**  
+1. **모델 파일 준비:**
+   - `yolov8x-seg.pt`: 안전가구 세그멘테이션 모델 [다운로드](https://docs.ultralytics.com/ko/models/yolov8/#supported-tasks-and-modes)
+   - `yolov8m.pt`: 사람 감지 모델 [다운로드](https://docs.ultralytics.com/ko/tasks/segment/#models)
+
+
+
+2. **모델 파일 경로:**
    - `/models/yolov8x-seg.pt`: 안전가구 세그멘테이션 모델  
    - `/models/yolov8m.pt`: 사람 감지 모델  
    파일 경로는 코드 내에서 필요에 따라 수정 가능합니다.
 
+
+
 2. **SMS 알림 기능 설정 (선택 사항):**  
    - `/credentials/account_sid.txt`와 `/credentials/auth_token.txt` 파일에 Twilio 계정 SID와 인증 토큰을 입력합니다.  
    - **주의:** SMS 전송 기능은 유료 서비스인 Twilio를 기반으로 하므로, 무료 환경에서는 해당 기능을 비활성화하거나 대체할 필요가 있습니다.
+
+1. **입력 비디오 파일 준비:**
+   - `시나리오 동영상 파일`: 3개의 시나리오 테스트 영상[다운로드](https://drive.google.com/file/d/14d90cJdAhtVTQs-mNNIeRZCxFy63y1u6/view?usp=drive_link)
+   
 
 3. **입력 및 출력 비디오 경로 설정:**  
    - 입력 비디오 경로: `/test-video/input/`  
