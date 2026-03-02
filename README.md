@@ -6,11 +6,9 @@
 
 ## 프로젝트 개요
 
-<img src="images/image1.png" alt="Logo" width="400" style="display:inline-block; margin-right:10px;" />
-<img src="images/image2.png" alt="Logo" width="400" style="display:inline-block; margin-right:10px;" />
-<img src="images/image3.png" alt="Logo" width="400" style="display:inline-block;" />
-
-
+<img src="https://github.com/user-attachments/assets/a7defabd-8809-4baf-a344-dd678a514e23" alt="Logo" width="400" style="display:inline-block; margin-right:10px;" />
+<img src="https://github.com/user-attachments/assets/c408b879-799c-4489-9101-9d61af8dd950" alt="Logo" width="400" style="display:inline-block; margin-right:10px;" />
+<img src="https://github.com/user-attachments/assets/056fd82b-2b9b-4216-bc99-507de0980c5d" alt="Logo" width="400" style="display:inline-block;" />
 
 - **목적:**  
   영상 내에서 사람(특히 노인)의 이동 및 활동을 모니터링하고, 안전가구와의 상대적 위치 및 상호작용을 분석하여 위험 상황(예: 낙상 등)을 신속하게 감지하고 경고를 전송합니다.
